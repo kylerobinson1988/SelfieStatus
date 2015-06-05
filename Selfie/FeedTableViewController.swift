@@ -10,8 +10,20 @@ import UIKit
 
 class FeedTableViewController: UITableViewController {
 
+//    
+//    var currentUser: PFUser.currentUser
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if PFUser.currentUser() == nil {
+            
+            if let welcomeVC = storyboard?.instantiateViewControllerWithIdentifier("welcomeNVC") as? UINavigationController {
+            
+                tabBarController?.presentViewController(welcomeVC, animated: false, completion: nil)
+                
+            }
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

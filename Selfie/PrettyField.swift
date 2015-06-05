@@ -8,6 +8,6 @@
 
 import UIKit
 
-class PrettyField: UIField {
+class PrettyField: UITextField {
    
 }
