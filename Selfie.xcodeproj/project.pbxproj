@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		910A2B5F1B2242F300AC04EC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910A2B5D1B2242F300AC04EC /* Bolts.framework */; };
+		910A2B601B2242F300AC04EC /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910A2B5E1B2242F300AC04EC /* Parse.framework */; };
 		9195A7B11B21E2BD00902B97 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F4E6231B20F9620000361C /* Parse.framework */; };
 		9195A7B31B21E82100902B97 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9195A7B21B21E82100902B97 /* Constants.swift */; };
 		91F4E5BE1B20A5A90000361C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4E5BD1B20A5A90000361C /* AppDelegate.swift */; };
@@ -59,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		910A2B5D1B2242F300AC04EC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.7.4 (1)/Bolts.framework"; sourceTree = "<group>"; };
+		910A2B5E1B2242F300AC04EC /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.7.4 (1)/Parse.framework"; sourceTree = "<group>"; };
 		9195A7B21B21E82100902B97 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		91F4E5B81B20A5A90000361C /* Selfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F4E5BC1B20A5A90000361C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,8 +132,10 @@
 				91F4E6191B20EDF00000361C /* libz.dylib in Frameworks */,
 				91F4E62C1B20F9620000361C /* ParseFacebookUtilsV4.framework in Frameworks */,
 				91F4E61A1B20EDF00000361C /* MobileCoreServices.framework in Frameworks */,
+				910A2B601B2242F300AC04EC /* Parse.framework in Frameworks */,
 				91F4E61B1B20EDF00000361C /* QuartzCore.framework in Frameworks */,
 				91F4E61C1B20EDF00000361C /* Security.framework in Frameworks */,
+				910A2B5F1B2242F300AC04EC /* Bolts.framework in Frameworks */,
 				91F4E61D1B20EDF00000361C /* StoreKit.framework in Frameworks */,
 				91F4E61E1B20EDF00000361C /* SystemConfiguration.framework in Frameworks */,
 			);
@@ -148,22 +154,11 @@
 		91F4E5AF1B20A5A90000361C = {
 			isa = PBXGroup;
 			children = (
-				91F4E6091B20EDF00000361C /* AudioToolbox.framework */,
-				91F4E60A1B20EDF00000361C /* CFNetwork.framework */,
-				91F4E60B1B20EDF00000361C /* CoreGraphics.framework */,
-				91F4E60C1B20EDF00000361C /* CoreLocation.framework */,
-				91F4E60D1B20EDF00000361C /* libsqlite3.dylib */,
-				91F4E60E1B20EDF00000361C /* libz.dylib */,
-				91F4E60F1B20EDF00000361C /* MobileCoreServices.framework */,
-				91F4E6101B20EDF00000361C /* QuartzCore.framework */,
-				91F4E6111B20EDF00000361C /* Security.framework */,
-				91F4E6121B20EDF00000361C /* StoreKit.framework */,
-				91F4E6131B20EDF00000361C /* SystemConfiguration.framework */,
 				91F4E5C11B20A5AA0000361C /* Main.storyboard */,
 				91F4E5BA1B20A5A90000361C /* Selfie */,
 				91F4E5D01B20A5AA0000361C /* SelfieTests */,
 				91F4E5B91B20A5A90000361C /* Products */,
-				91F4E6081B20EC750000361C /* Libraries */,
+				91F4E6081B20EC750000361C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,7 +176,7 @@
 			children = (
 				91F4E5FD1B20D6310000361C /* IBDesignable */,
 				91F4E5EA1B20CD250000361C /* Login Flow */,
-				91F4E5E91B20CD190000361C /* Selfie Feed */,
+				91F4E5E91B20CD190000361C /* Feed */,
 				91F4E5E81B20CD080000361C /* Profile  */,
 				91F4E5E71B20CCEB0000361C /* New Selfie Flow */,
 				91F4E5BB1B20A5A90000361C /* Supporting Files */,
@@ -242,13 +237,13 @@
 			name = "Profile ";
 			sourceTree = "<group>";
 		};
-		91F4E5E91B20CD190000361C /* Selfie Feed */ = {
+		91F4E5E91B20CD190000361C /* Feed */ = {
 			isa = PBXGroup;
 			children = (
 				91F4E5EB1B20D03E0000361C /* FeedTableViewController.swift */,
 				91F4E5F51B20D48C0000361C /* Views */,
 			);
-			name = "Selfie Feed";
+			name = Feed;
 			sourceTree = "<group>";
 		};
 		91F4E5EA1B20CD250000361C /* Login Flow */ = {
@@ -290,9 +285,22 @@
 			name = IBDesignable;
 			sourceTree = "<group>";
 		};
-		91F4E6081B20EC750000361C /* Libraries */ = {
+		91F4E6081B20EC750000361C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				910A2B5D1B2242F300AC04EC /* Bolts.framework */,
+				910A2B5E1B2242F300AC04EC /* Parse.framework */,
+				91F4E6091B20EDF00000361C /* AudioToolbox.framework */,
+				91F4E60A1B20EDF00000361C /* CFNetwork.framework */,
+				91F4E60B1B20EDF00000361C /* CoreGraphics.framework */,
+				91F4E60C1B20EDF00000361C /* CoreLocation.framework */,
+				91F4E60D1B20EDF00000361C /* libsqlite3.dylib */,
+				91F4E60E1B20EDF00000361C /* libz.dylib */,
+				91F4E60F1B20EDF00000361C /* MobileCoreServices.framework */,
+				91F4E6101B20EDF00000361C /* QuartzCore.framework */,
+				91F4E6111B20EDF00000361C /* Security.framework */,
+				91F4E6121B20EDF00000361C /* StoreKit.framework */,
+				91F4E6131B20EDF00000361C /* SystemConfiguration.framework */,
 				91F4E6221B20F9620000361C /* Bolts.framework */,
 				91F4E6231B20F9620000361C /* Parse.framework */,
 				91F4E6241B20F9620000361C /* ParseCrashReporting.framework */,
@@ -301,7 +309,7 @@
 				91F4E6271B20F9620000361C /* ParseUI.framework */,
 				91F4E6061B20EC6E0000361C /* parse-library-1.7.4 (1) */,
 			);
-			name = Libraries;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -556,6 +564,8 @@
 					"(1)",
 					"$(PROJECT_DIR)/parse-library-1.7.4",
 					"(1)",
+					"$(PROJECT_DIR)/parse-library-1.7.4",
+					"(1)",
 				);
 				INFOPLIST_FILE = Selfie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -572,6 +582,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/parse-library-1.7.4",
+					"(1)",
 					"$(PROJECT_DIR)/parse-library-1.7.4",
 					"(1)",
 					"$(PROJECT_DIR)/parse-library-1.7.4",

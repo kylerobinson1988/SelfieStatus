@@ -7,14 +7,70 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var theUsername: PrettyField!
+    @IBOutlet weak var thePassword: PrettyField!
+    @IBAction func loginButton(sender: AnyObject) {
+        
+        loginNow()
+        
+    }
+    
+    
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillChangeFrameNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
+            
+            self.view.setNeedsUpdateConstraints()
+            self.view.setNeedsLayout()
+            
+            if let kbSize = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size{
+                
+                self.bottomConstraint.constant = 20 + kbSize.height
+                
+            }
+            
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardDidHideNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
+            
+            self.bottomConstraint.constant = 20
+            
+        }
+        
     }
+    
+        
+    func loginNow() {
+        
+        var username = theUsername.text
+        var password = thePassword.text
+        
+        PFUser.logInWithUsernameInBackground(username, password: password) { (user: PFUser?, error: NSError?) -> Void in
+            
+                if user != nil {
+                
+                    println("Successful login!")
+                
+                } else {
+                
+                    println("Unsuccessful login :(")
+                
+                }
+            
+            
+            }
+    
+    
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,5 +87,7 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
 
 }

@@ -10,10 +10,8 @@ import UIKit
 
 class FeedTableViewController: UITableViewController {
 
-//    
-//    var currentUser: PFUser.currentUser
-    
-    override func viewDidLoad() {
+
+    override func viewDidAppear(animated:Bool) {
         super.viewDidLoad()
         
         if PFUser.currentUser() == nil {
