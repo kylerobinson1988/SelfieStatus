@@ -24,6 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
  
         Parse.setApplicationId("NFyn4UINVjNrERnU1fVVaktDQd6WLLLZFZHtmRFb", clientKey: "YDhcLPqQKPaesazAry6aDVf6rxVZEoI9pSx1u6cw")
         
+        
+        
+        //Currently using my own keys rather than Jo's.  Update back to Jo's for Master branch.
+//        Parse.setApplicationId("L3zfIqjmswBWWlPrcBsvVpdjlKgmPmYYrCrJhuyk", clientKey: "5f7Ek0b0o75pKRhw1GrzEHbAxFuEPXWfsMROMrb0")
+        
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         

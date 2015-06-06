@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
-class FeedTableViewController: UITableViewController {
-
+@IBDesignable class FeedTableViewController: UITableViewController {
+    
+    var uploads: [PFObject] = []
+    var likesCount: Int = 0
+    var timeElapsed: String = ""
 
     override func viewDidAppear(animated:Bool) {
         super.viewDidLoad()
+        
         
         if PFUser.currentUser() == nil {
             
@@ -21,6 +27,10 @@ class FeedTableViewController: UITableViewController {
                 tabBarController?.presentViewController(welcomeVC, animated: false, completion: nil)
                 
             }
+            
+        
+            
+            
         }
 
         // Uncomment the following line to preserve selection between presentations
@@ -49,16 +59,28 @@ class FeedTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("feedCell", forIndexPath: indexPath) as! FeedTableViewCell
 
-        // Configure the cell...
-
+        cell.feedImageView.layer.cornerRadius = 25
+        cell.feedImageView.layer.masksToBounds = true
+        
+        viewDidLoad()
+        
+        
+        
+        
+        
+        
+        
+        
         return cell
     }
-    */
+    
 
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

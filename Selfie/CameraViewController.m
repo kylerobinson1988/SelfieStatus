@@ -36,7 +36,7 @@
     UIButton * takeButton = [[UIButton alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - buttonSize) / 2, SCREEN_HEIGHT - 40 - buttonSize, buttonSize, buttonSize)];
                                                                    
    takeButton.layer.cornerRadius = buttonSize /2;
-   takeButton.backgroundColor = [UIColor redColor];
+   takeButton.backgroundColor = [UIColor colorWithRed:0.96 green:0.19 blue:0.19 alpha:1];
     
     [takeButton addTarget:imagePickerController action:@selector(takePicture) forControlEvents:UIControlEventTouchUpInside];
    
@@ -47,7 +47,7 @@
     toggleCamera.center = CGPointMake(toggleCamera.center.x, takeButton.center.y);
     
     toggleCamera.layer.cornerRadius = 25;
-    toggleCamera.backgroundColor = [UIColor blueColor];
+    toggleCamera.backgroundColor = [UIColor colorWithRed:0.56 green:0.85 blue:0.96 alpha:1];
     
     [self.view addSubview:toggleCamera];
     

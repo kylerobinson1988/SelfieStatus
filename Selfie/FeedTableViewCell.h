@@ -10,4 +10,9 @@
 
 @interface FeedTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView * feedImageView;
+@property (weak, nonatomic) IBOutlet UILabel * timeStampLabel;
+@property (weak, nonatomic) IBOutlet UILabel * likesCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel * commentTextLabel;
+
 @end

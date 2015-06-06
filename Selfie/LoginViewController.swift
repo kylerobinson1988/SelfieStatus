@@ -12,6 +12,7 @@ import Bolts
 
 class LoginViewController: UIViewController {
 
+    
     @IBOutlet weak var theUsername: PrettyField!
     @IBOutlet weak var thePassword: PrettyField!
     @IBAction func loginButton(sender: AnyObject) {
@@ -20,9 +21,13 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func backButton(sender: AnyObject) {
+        
+        self.navigationController?.popToRootViewControllerAnimated(true)
+        
+    }
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,4 +95,4 @@ class LoginViewController: UIViewController {
 
 }
 
-}
+
