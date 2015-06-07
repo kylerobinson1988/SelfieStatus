@@ -10,4 +10,10 @@
 
 @implementation SelfieCollectionViewCell
 
+- (IBAction)clickedDeleteButton:(id)sender {
+    
+    
+    
+    
+}
 @end

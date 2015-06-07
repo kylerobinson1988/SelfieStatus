@@ -14,7 +14,6 @@ import Bolts
     
     var uploads: [PFObject] = []
     var likesCount: Int = 0
-    var timeElapsed: String = ""
 
     override func viewDidAppear(animated:Bool) {
         super.viewDidLoad()
@@ -63,11 +62,27 @@ import Bolts
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("feedCell", forIndexPath: indexPath) as! FeedTableViewCell
 
+        var cellLikesCount = likesCount
+        var timer = NSTimer()
+        var counter = 0
+        var likeStar = false
+        
         cell.feedImageView.layer.cornerRadius = 25
         cell.feedImageView.layer.masksToBounds = true
         
-        viewDidLoad()
+        func viewDidLoad() {
+            
+            cell.timeStampLabel.text = String(counter)
+            
+        }
+
         
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
+        
+        
+        func updateCounter() {
+            cell.timeStampLabel.text = "\(String(counter)) ago"
+        }
         
         
         

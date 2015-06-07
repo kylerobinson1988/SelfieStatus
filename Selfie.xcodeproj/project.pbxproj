@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		91565FE81B23453600D32EE1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91565FE61B23453600D32EE1 /* Bolts.framework */; };
 		91565FE91B23453600D32EE1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91565FE71B23453600D32EE1 /* Parse.framework */; };
+		9156601E1B24D8AA00D32EE1 /* SelfieCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9156601D1B24D8AA00D32EE1 /* SelfieCollectionView.swift */; };
+		915660211B24E6AA00D32EE1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915660201B24E6AA00D32EE1 /* SettingsViewController.swift */; };
 		9195A7B31B21E82100902B97 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9195A7B21B21E82100902B97 /* Constants.swift */; };
 		91F4E5BE1B20A5A90000361C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4E5BD1B20A5A90000361C /* AppDelegate.swift */; };
 		91F4E5C01B20A5AA0000361C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4E5BF1B20A5A90000361C /* ProfileViewController.swift */; };
@@ -57,6 +59,8 @@
 		91565FE61B23453600D32EE1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		91565FE71B23453600D32EE1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		91565FEA1B23482400D32EE1 /* TestCode.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestCode.playground; sourceTree = "<group>"; };
+		9156601D1B24D8AA00D32EE1 /* SelfieCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfieCollectionView.swift; sourceTree = "<group>"; };
+		915660201B24E6AA00D32EE1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9195A7B21B21E82100902B97 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		91F4E5B81B20A5A90000361C /* Selfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F4E5BC1B20A5A90000361C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,6 +136,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9156601F1B24E69200D32EE1 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				915660201B24E6AA00D32EE1 /* SettingsViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		91F4E5AF1B20A5A90000361C = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +172,7 @@
 				91F4E5EA1B20CD250000361C /* Login Flow */,
 				91F4E5E91B20CD190000361C /* Feed */,
 				91F4E5E81B20CD080000361C /* Profile  */,
+				9156601F1B24E69200D32EE1 /* Settings */,
 				91F4E5E71B20CCEB0000361C /* New Selfie Flow */,
 				91F4E5BB1B20A5A90000361C /* Supporting Files */,
 			);
@@ -252,6 +265,7 @@
 			children = (
 				91F4E5FA1B20D5C90000361C /* SelfieCollectionViewCell.h */,
 				91F4E5FB1B20D5C90000361C /* SelfieCollectionViewCell.m */,
+				9156601D1B24D8AA00D32EE1 /* SelfieCollectionView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -387,10 +401,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9156601E1B24D8AA00D32EE1 /* SelfieCollectionView.swift in Sources */,
 				91F4E6011B20D68C0000361C /* PrettyField.swift in Sources */,
 				9195A7B31B21E82100902B97 /* Constants.swift in Sources */,
 				91F4E6051B20D75E0000361C /* StarButton.swift in Sources */,
 				91F4E5F21B20D0780000361C /* RegisterViewController.swift in Sources */,
+				915660211B24E6AA00D32EE1 /* SettingsViewController.swift in Sources */,
 				91F4E5F91B20D54B0000361C /* FeedTableViewCell.m in Sources */,
 				91F4E5E61B20CCD00000361C /* CameraViewController.m in Sources */,
 				91F4E5EC1B20D03E0000361C /* FeedTableViewController.swift in Sources */,

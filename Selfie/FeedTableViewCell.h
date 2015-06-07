@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel * likesCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel * commentTextLabel;
 
+- (IBAction)likeButton:(id)sender;
+
 @end

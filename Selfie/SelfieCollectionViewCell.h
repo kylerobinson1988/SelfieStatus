@@ -10,4 +10,14 @@
 
 @interface SelfieCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *snapshotView;
+
+@property (weak, nonatomic) IBOutlet UIButton *likesStar;
+@property (weak, nonatomic) IBOutlet UILabel *likesLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
+
+- (IBAction)clickedDeleteButton:(id)sender;
+
+
 @end
