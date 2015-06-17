@@ -1,0 +1,5 @@
+#Selfie Stars
+
+This app incorporates Parse, the camera and its delegates through UIImagePicker, an activity feed, and a login flow.  
+
+This is a simple, Instagram-like app where you can take a photo, add a caption, and add it to your activity feed.  Also features a Settings page where you can change your password and profile picture.
